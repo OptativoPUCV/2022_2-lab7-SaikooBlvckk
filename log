@@ -48,3 +48,30 @@ Sat 15 Oct 2022 04:24:47 PM UTC:
  tests:  7|1
 total_score: 45/70
 78ddf64
+Sat 15 Oct 2022 04:43:43 PM UTC: 
+ heap.c | 36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:68:25: error: ‘indexch1’ undeclared (first use in this function); did you mean ‘index1’?
+   68 |       if (pq->heapArray[indexch1].priority > pq->heapArray[i].priority){
+      |                         ^~~~~~~~
+      |                         index1
+heap.c:68:25: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:71:43: error: ‘apt2’ undeclared (first use in this function); did you mean ‘pt2’?
+   71 |         pq->heapArray[indexch1].priority= apt2;
+      |                                           ^~~~
+      |                                           pt2
+heap.c:72:39: error: ‘adata2’ undeclared (first use in this function); did you mean ‘data2’?
+   72 |         pq->heapArray[indexch1].data= adata2;
+      |                                       ^~~~~~
+      |                                       data2
+heap.c:76:45: error: self-comparison always evaluates to false [-Werror=tautological-compare]
+   76 |     else if (pq->heapArray[index2].priority > pq->heapArray[index2].priority){
+      |                                             ^
+heap.c:63:11: error: unused variable ‘data2’ [-Werror=unused-variable]
+   63 |     void *data2 = pq->heapArray[i].data;
+      |           ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bf91c01
