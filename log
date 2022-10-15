@@ -19,3 +19,15 @@ heap.c:40:31: error: expected expression before ‘)’ token
       |                               ^
 Compilation failed
 e163c55
+Sat 15 Oct 2022 04:09:37 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:46: error: ‘HeapElem’ undeclared (first use in this function); did you mean ‘heapElem’?
+   40 |   new->heapArray = (heapElem *)malloc(sizeof(HeapElem));
+      |                                              ^~~~~~~~
+      |                                              heapElem
+heap.c:40:46: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+eacfedd
