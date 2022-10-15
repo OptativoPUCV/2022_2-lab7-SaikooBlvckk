@@ -31,3 +31,8 @@ heap.c:40:46: error: ‘HeapElem’ undeclared (first use in this function); did
 heap.c:40:46: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 eacfedd
+Sat 15 Oct 2022 04:09:42 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+47a1d1d
