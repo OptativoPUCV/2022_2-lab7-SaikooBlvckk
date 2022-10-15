@@ -91,3 +91,19 @@ heap.c:76:45: error: self-comparison always evaluates to false [-Werror=tautolog
 cc1: all warnings being treated as errors
 Compilation failed
 acfe7c8
+Sat 15 Oct 2022 04:44:32 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:71:23: error: ‘indexch1’ undeclared (first use in this function); did you mean ‘index1’?
+   71 |         pq->heapArray[indexch1].priority= pt2;
+      |                       ^~~~~~~~
+      |                       index1
+heap.c:71:23: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:76:45: error: self-comparison always evaluates to false [-Werror=tautological-compare]
+   76 |     else if (pq->heapArray[index2].priority > pq->heapArray[index2].priority){
+      |                                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+df93aa2
