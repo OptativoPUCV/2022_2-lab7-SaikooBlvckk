@@ -25,7 +25,7 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-
+  
 }
 
 
@@ -34,6 +34,9 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-
-   return NULL;
+  Heap* new = (Heap *)malloc(sizeof(Heap));
+  new->size = 0;
+  new->capac = 3;
+  new->heapArray = (HeapElem *)malloc(sizeof(HeapElem));
+  return new;
 }
