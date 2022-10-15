@@ -107,3 +107,14 @@ heap.c:76:45: error: self-comparison always evaluates to false [-Werror=tautolog
 cc1: all warnings being treated as errors
 Compilation failed
 df93aa2
+Sat 15 Oct 2022 04:44:47 PM UTC: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:76:45: error: self-comparison always evaluates to false [-Werror=tautological-compare]
+   76 |     else if (pq->heapArray[index2].priority > pq->heapArray[index2].priority){
+      |                                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+e78cfa7
