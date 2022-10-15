@@ -75,3 +75,19 @@ heap.c:63:11: error: unused variable ‘data2’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 bf91c01
+Sat 15 Oct 2022 04:44:18 PM UTC: 
+ heap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:69:50: error: ‘indexch1’ undeclared (first use in this function); did you mean ‘index1’?
+   69 |         pq->heapArray[i].priority= pq->heapArray[indexch1].priority;
+      |                                                  ^~~~~~~~
+      |                                                  index1
+heap.c:69:50: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:76:45: error: self-comparison always evaluates to false [-Werror=tautological-compare]
+   76 |     else if (pq->heapArray[index2].priority > pq->heapArray[index2].priority){
+      |                                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+acfe7c8
